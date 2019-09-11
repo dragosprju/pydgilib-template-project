@@ -88,7 +88,7 @@ If you are going to use Jupyter Lab, then a suggestion is to  install it as a ma
 
 * On either Windows or Linux, run `pip install jupyterlab`.
 
-In order to use the newly made Python environment in the `./Python/Plots` folder, then:
+In order to use the `pipenv` environment in the `./Python/Plots` folder on Jupyter Lab, then:
 
 * On either Windows or Linux, run `pipenv shell` inside `./Python/Plots`
 
@@ -161,9 +161,15 @@ when using two computers at a time:
 
 - [x] Expose delay setting
 
-- [x] LED test
+- [x] Make a LED blinking example
 
-- [ ] Serial test
+- [ ] Make a serial example
+
+- [ ] Write a commentary about the dll showing as missing when using Python x64
+
+- [ ] Make a printf example
+
+- [ ] Gitignore compiled stuff
 
 **Library**
 
