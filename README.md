@@ -8,7 +8,7 @@
     
     1.2. [Step 2: `pipenv` environments initialization](#step-2:-`pipenv`-environments-initialization)
 
-    1.3. [Step 3: Jupyter Notebook installation](#step-3:-jupyter-notebook-installation)
+    1.3. [Step 3: Jupyter Lab installation](#step-3:-jupyter-notebook-installation)
 
 2. [Tutorial](#tutorial)
 
@@ -82,16 +82,35 @@ Considering `.` is the location of the cloned repo, then:
   _only_ added 64-bit Python to path, as instructed in the
   [Requirements](#requirements) section).
 
-### Step 3: Jupyter Notebook installation
+### Step 3: Jupyter Lab installation
+
+If you are going to use Jupyter Lab, then a suggestion is to  install it as a main package on your computer, separate from the `pipenv` Python environments established for this project.
+
+* On either Windows or Linux, run `pip install jupyterlab`.
 
 In order to use the newly made Python environment in the `./Python/Plots` folder, then:
 
 * On either Windows or Linux, run `pipenv shell` inside `./Python/Plots`
 
-* Then, run `python -m ipykernel install --user --name=my-virtualenv-name`, where `my-virtualenv-name` can be whatever name you want to distinguish the Python environment in the Jupyter Notebook kernel list menu
-
+* Then, run `python -m ipykernel install --user --name=my-virtualenv-name`, where `my-virtualenv-name` can be whatever name you want to distinguish the Python environment in the Jupyter Lab kernel list menu
 
 ## Tutorial
+
+### Running experiments
+
+After everything is setup:
+
+* On Windows, in the root directory of the repo `.`, you can run the `run_experiments.cmd` batch script. You can also do what the script does by yourself, if you want:
+
+  * Go to `./Python/Experiments`
+
+  * Run `pipenv shell` in a command window
+
+  * Run `python experiments.py` in the same command window
+
+* If it worked, a plot as shown below should pop up and populate itself:
+
+  ![Plot](.media/Plot.PNG)
 
 ## Folder structure
 
@@ -140,7 +159,7 @@ when using two computers at a time:
 
 - [x] Keep plot window from closing
 
-- [ ] Expose delay setting
+- [x] Expose delay setting
 
 - [x] LED test
 
@@ -148,7 +167,7 @@ when using two computers at a time:
 
 **Library**
 
-- [x] Fix title of plot (by exposing title option in the example project here)
+- [x] Fix title of plot (by exposing title option in the example project hereș will probably repair in library repo later)
 
 **README**
 
