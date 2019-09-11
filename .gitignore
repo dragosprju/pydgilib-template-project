@@ -5,3 +5,4 @@
 README-draft\.md
 **/*.csv
 \.\.bfg-report/
+**/.ipynb_checkpoints
