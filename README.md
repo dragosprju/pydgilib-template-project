@@ -3,9 +3,23 @@
 ## Table of Contents
 
 1. [Requirements & Installation](#requirements-&-installation)
+    
+    1.1. [Step 1: General requirements](#step-1:-general-requirements)
+    
+    1.2. [Step 2: `pipenv` environments initialization](#step-2:-`pipenv`-environments-initialization)
+
+    1.3. [Step 3: Jupyter Notebook installation](#step-3:-jupyter-notebook-installation)
+
 2. [Tutorial](#tutorial)
+
 3. [Folder structure](#folder-structure)
-4. [Collaboration tools](#collaboration-tools)
+
+4. [Remarks](#remarks)
+
+5. [Collaboration tools](#collaboration-tools)
+
+6. [TODO](#TODO)
+
 
 ## Requirements & Installation
 
@@ -68,6 +82,15 @@ Considering `.` is the location of the cloned repo, then:
   _only_ added 64-bit Python to path, as instructed in the
   [Requirements](#requirements) section).
 
+### Step 3: Jupyter Notebook installation
+
+In order to use the newly made Python environment in the `./Python/Plots` folder, then:
+
+* On either Windows or Linux, run `pipenv shell` inside `./Python/Plots`
+
+* Then, run `python -m ipykernel install --user --name=my-virtualenv-name`, where `my-virtualenv-name` can be whatever name you want to distinguish the Python environment in the Jupyter Notebook kernel list menu
+
+
 ## Tutorial
 
 ## Folder structure
@@ -77,19 +100,19 @@ them will use the 32-bit Python version only, in order to interact with
 `dgilib.dll` (which comes only in a 32-bit format). Other scripts will use
 64-bit Python to overcome a well known limitation of processes on Windows
 and Linux being able to use only up to 2GB of RAM when running as 32-bit, even
-when running on 64-bit OSes ([^1] [^2]).
+when running on 64-bit OSes ([1], [2]).
 
 There are `Pipfile`-s in both folders to ease the installation of packages
 using `pipenv`, for the two different Python versions of different
 architectures.
 
-[^1] https://en.wikipedia.org/wiki/2_GB_limit
+[1]: https://en.wikipedia.org/wiki/2_GB_limit
 
-[^2] https://docs.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases
+[2]: https://docs.microsoft.com/en-us/windows/win32/memory/memory-limits-for-windows-releases
 
 ## Remarks
 
-- The `pipenv` environments get installed by default in the `C:\Users\[Your Username]\.virtualenvs` on Windows and `/home/[your username]/.virtualenvs`
+- The `pipenv` environments get installed by default in the `C:\Users\[Your Username]\.virtualenvs` directory on Windows and in `/home/[your username]/.virtualenvs`
   on Linux. Sometimes, more environments than needed are getting initialized,
   they then remain abandoned and consume unnecessary space. You can visit the
   aforementioned paths and delete the discarded environments manually to save
@@ -113,19 +136,19 @@ when using two computers at a time:
 
 **Project itself**
 
-- [ ] Expose color selection for gpio pins
+- [x] Expose color selection for gpio pins
 
-- [ ] Keep plot window from closing
+- [x] Keep plot window from closing
 
 - [ ] Expose delay setting
 
-- [ ] LED test
+- [x] LED test
 
 - [ ] Serial test
 
 **Library**
 
-- [ ] Fix title of plot
+- [x] Fix title of plot (by exposing title option in the example project here)
 
 **README**
 
